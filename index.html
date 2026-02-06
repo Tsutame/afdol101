@@ -10,7 +10,174 @@
     <div class="container">
         <header id="header"></header>
         <section id="hero"></section>
-        <main id="content"></main>
+        <main id="content">
+            <article class="lesson">
+                <header class="lesson-header">
+                    <h1>บทเรียนพื้นฐาน HTML &amp; CSS</h1>
+                    <p class="lead">
+                        เหมาะสำหรับมือใหม่ เรียนรู้โครงสร้างเว็บด้วย HTML และตกแต่งให้สวยงามด้วย CSS แบบเข้าใจง่าย
+                        พร้อมตัวอย่างโค้ดและแบบฝึกหัดสั้น ๆ
+                    </p>
+                    <div class="meta">
+                        <span class="badge">Beginner</span>
+                        <span class="badge badge-soft">HTML</span>
+                        <span class="badge badge-soft">CSS</span>
+                    </div>
+                </header>
+
+                <section class="lesson-section" id="html-intro">
+                    <h2>1) HTML คืออะไร?</h2>
+                    <p>
+                        HTML (HyperText Markup Language) คือ “ภาษาโครงสร้าง” ของหน้าเว็บ ใช้บอกว่าเนื้อหาในหน้าเว็บคืออะไร เช่น
+                        หัวข้อ ข้อความ รูปภาพ ลิงก์ รายการ ฯลฯ
+                    </p>
+
+                    <div class="callout">
+                        <p><strong>จำง่าย:</strong> HTML = โครง, CSS = แต่งหน้า</p>
+                    </div>
+                </section>
+
+                <section class="lesson-section" id="html-structure">
+                    <h2>2) โครงสร้างไฟล์ HTML พื้นฐาน</h2>
+                    <p>ไฟล์ HTML มักเริ่มต้นด้วยโครงสร้างนี้</p>
+                    <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="th"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8" /&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+    &lt;title&gt;My First Page&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;สวัสดี HTML&lt;/h1&gt;
+    &lt;p&gt;นี่คือย่อหน้า&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+                    <ul class="checklist">
+                        <li><strong>&lt;head&gt;</strong> เก็บข้อมูลของหน้า เช่น title, meta, link css</li>
+                        <li><strong>&lt;body&gt;</strong> คือส่วนที่ผู้ใช้มองเห็นจริง</li>
+                    </ul>
+                </section>
+
+                <section class="lesson-section" id="html-common-tags">
+                    <h2>3) แท็กที่ใช้บ่อย</h2>
+
+                    <div class="grid">
+                        <div class="card">
+                            <h3>หัวข้อ &amp; ย่อหน้า</h3>
+                            <pre><code>&lt;h1&gt;หัวข้อใหญ่&lt;/h1&gt;
+&lt;h2&gt;หัวข้อรอง&lt;/h2&gt;
+&lt;p&gt;ข้อความย่อหน้า&lt;/p&gt;</code></pre>
+                        </div>
+
+                        <div class="card">
+                            <h3>ลิงก์ &amp; รูปภาพ</h3>
+                            <pre><code>&lt;a href="https://example.com"&gt;ไปที่เว็บ&lt;/a&gt;
+&lt;img src="photo.jpg" alt="คำอธิบายรูป" /&gt;</code></pre>
+                        </div>
+
+                        <div class="card">
+                            <h3>รายการ (List)</h3>
+                            <pre><code>&lt;ul&gt;
+  &lt;li&gt;รายการ 1&lt;/li&gt;
+  &lt;li&gt;รายการ 2&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                        </div>
+
+                        <div class="card">
+                            <h3>กล่อง/โครง (Layout)</h3>
+                            <pre><code>&lt;header&gt;ส่วนหัว&lt;/header&gt;
+&lt;main&gt;เนื้อหาหลัก&lt;/main&gt;
+&lt;footer&gt;ส่วนท้าย&lt;/footer&gt;
+&lt;div&gt;กล่องทั่วไป&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="lesson-section" id="html-attributes">
+                    <h2>4) Attributes (คุณสมบัติของแท็ก)</h2>
+                    <p>
+                        Attribute คือข้อมูลเพิ่มเติมของแท็ก เช่น <code>href</code> ของลิงก์ หรือ <code>src</code> ของรูปภาพ
+                    </p>
+                    <pre><code>&lt;a href="https://example.com" target="_blank"&gt;เปิดแท็บใหม่&lt;/a&gt;</code></pre>
+                    <p class="muted">
+                        แนะนำให้ใส่ <code>alt</code> ใน <code>&lt;img&gt;</code> เสมอ เพื่อการเข้าถึง (Accessibility) และ SEO
+                    </p>
+                </section>
+
+                <section class="lesson-section" id="css-intro">
+                    <h2>5) CSS คืออะไร?</h2>
+                    <p>
+                        CSS (Cascading Style Sheets) คือภาษาสำหรับ “ตกแต่ง” หน้าเว็บ เช่น สี ขนาดฟอนต์ ระยะห่าง การจัดวาง
+                        ทำให้ HTML ดูสวยและเป็นธีมเดียวกัน
+                    </p>
+                </section>
+
+                <section class="lesson-section" id="css-syntax">
+                    <h2>6) รูปแบบการเขียน CSS</h2>
+                    <p>CSS ประกอบด้วย <strong>selector</strong> และ <strong>properties</strong></p>
+                    <pre><code>/* selector { property: value; } */
+h1 {
+  color: #2563eb;
+  font-size: 32px;
+}</code></pre>
+                </section>
+
+                <section class="lesson-section" id="css-selectors">
+                    <h2>7) Selector ที่ควรรู้</h2>
+                    <div class="grid">
+                        <div class="card">
+                            <h3>เลือกตามแท็ก</h3>
+                            <pre><code>p { color: #334155; }</code></pre>
+                        </div>
+                        <div class="card">
+                            <h3>เลือกตามคลาส (.)</h3>
+                            <pre><code>.card { border: 1px solid #e2e8f0; }</code></pre>
+                        </div>
+                        <div class="card">
+                            <h3>เลือกตาม id (#)</h3>
+                            <pre><code>#content { padding: 24px; }</code></pre>
+                        </div>
+                        <div class="card">
+                            <h3>เลือกแบบซ้อน</h3>
+                            <pre><code>.card h3 { margin-bottom: 8px; }</code></pre>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="lesson-section" id="css-box-model">
+                    <h2>8) Box Model (สำคัญมาก)</h2>
+                    <p>ทุก element เป็นกล่อง มี 4 ส่วน: content → padding → border → margin</p>
+                    <pre><code>.box {
+  padding: 16px;  /* ระยะด้านใน */
+  border: 1px solid #cbd5e1;
+  margin: 16px;   /* ระยะด้านนอก */
+}</code></pre>
+                </section>
+
+                <section class="lesson-section" id="css-layout-flex">
+                    <h2>9) จัดวางแบบง่ายด้วย Flexbox</h2>
+                    <pre><code>.row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+}</code></pre>
+                    <p class="muted">
+                        เคล็ดลับ: ถ้าติดปัญหาจัดกลางแนวนอน/แนวตั้ง ให้เริ่มจาก <code>display: flex</code> ก่อน
+                    </p>
+                </section>
+
+                <section class="lesson-section" id="mini-practice">
+                    <h2>10) แบบฝึกหัด (ลองทำ 10 นาที)</h2>
+                    <ol class="steps">
+                        <li>เปลี่ยนข้อความปุ่มให้เป็น “เริ่มเรียน”</li>
+                        <li>เพิ่มหัวข้อใหม่ในบทเรียน เช่น “Semantic HTML”</li>
+                        <li>ลองเปลี่ยนสีธีมใน CSS จากน้ำเงินเป็นเขียว โดยแก้ค่าตัวแปรสี</li>
+                    </ol>
+                </section>
+            </article>
+        </main>
         <aside id="sidebar"></aside>
         <footer id="footer"></footer>
     </div>
